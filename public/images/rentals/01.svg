@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="Rental photo placeholder 01">
+  <rect width="600" height="450" fill="#FAF7F2"/>
+  <rect x="1" y="1" width="598" height="448" stroke="#E8E0D8" stroke-width="2"/>
+  <circle cx="300" cy="175" r="52" fill="#EDE4DC"/>
+  <path d="M280 195h40M300 175v40" stroke="#B8956B" stroke-width="2" stroke-linecap="round"/>
+  <text x="300" y="265" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="#2D1B2E">01</text>
+  <text x="300" y="310" text-anchor="middle" font-family="Georgia, serif" font-size="14" letter-spacing="3" fill="#6B5B6E">PHOTO PLACEHOLDER</text>
+</svg>

@@ -1,0 +1,35 @@
+.contact-grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.contact-info ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.contact-info li span {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 0.25rem;
+}
+
+.contact-info a {
+  font-weight: 600;
+}
+
+.contact-info p {
+  color: var(--color-muted);
+}
+
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1.4fr;
+    align-items: start;
+  }
+}

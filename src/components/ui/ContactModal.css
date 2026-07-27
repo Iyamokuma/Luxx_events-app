@@ -1,0 +1,71 @@
+.contact-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.contact-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  border: none;
+  background: rgba(17, 17, 17, 0.5);
+  cursor: pointer;
+}
+
+.contact-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 640px);
+  max-height: min(90vh, 900px);
+  overflow-y: auto;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: var(--space-md);
+}
+
+.contact-modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.contact-modal__header h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-modal__header p {
+  margin-top: 0.35rem;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.contact-modal__close {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.contact-modal__close:hover {
+  background: #f5f5f5;
+}
+
+@media (min-width: 768px) {
+  .contact-modal__dialog {
+    padding: var(--space-lg);
+  }
+}

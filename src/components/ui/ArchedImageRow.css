@@ -1,0 +1,107 @@
+.arched-row {
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(0.5rem, 1.5vw, 1rem);
+  width: 100%;
+  padding-inline: clamp(1rem, 3vw, 2rem);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.arched-row::-webkit-scrollbar {
+  display: none;
+}
+
+.arched-row__item {
+  flex: 0 0 clamp(120px, 18vw, 220px);
+  scroll-snap-align: center;
+}
+
+/* Hero: always show all 5 arches in one row — no horizontal scroll */
+.arched-row--hero {
+  overflow-x: visible;
+  scroll-snap-type: none;
+  justify-content: center;
+  gap: clamp(0.2rem, 1.2vw, 1rem);
+  padding-inline: clamp(0.5rem, 2vw, 2rem);
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+.arched-row--hero .arched-row__item {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 220px;
+  scroll-snap-align: unset;
+}
+
+@media (min-width: 768px) {
+  .arched-row {
+    justify-content: center;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+
+  .arched-row__item {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .arched-row__item,
+  .arched-row--hero .arched-row__item {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 767px) {
+  .arched-row--hero .arched-image {
+    aspect-ratio: 3 / 4.2;
+  }
+}
+
+@media (max-width: 380px) {
+  .arched-row--hero {
+    gap: 0.2rem;
+    padding-inline: 0.4rem;
+  }
+
+  .arched-row--hero .arched-image {
+    aspect-ratio: 3 / 3.8;
+  }
+}
+
+.arched-row--hero .arched-image {
+  border: 2px solid rgba(201, 166, 107, 0.35);
+  background: linear-gradient(180deg, #1a1520 0%, #0f0c14 100%);
+  box-shadow:
+    0 20px 48px rgba(0, 0, 0, 0.45),
+    0 0 24px rgba(201, 166, 107, 0.08);
+}
+
+.arched-row--hero .arched-row__item:nth-child(odd) .arched-image {
+  box-shadow:
+    0 20px 48px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(196, 133, 138, 0.1);
+}
+
+.arched-row--hero .arched-row__item:nth-child(even) .arched-image {
+  box-shadow:
+    0 20px 48px rgba(0, 0, 0, 0.5),
+    0 0 24px rgba(201, 166, 107, 0.14);
+}
+
+.arched-row--hero .arched-image img {
+  transition: transform 400ms ease;
+}
+
+.arched-row--hero .arched-row__item:hover .arched-image img {
+  transform: scale(1.04);
+}
+

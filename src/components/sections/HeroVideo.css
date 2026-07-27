@@ -1,0 +1,104 @@
+.hero-video {
+  position: relative;
+  padding-block: var(--space-md) var(--space-lg);
+  background: linear-gradient(180deg, #0d0a12 0%, #0a0810 100%);
+  overflow: hidden;
+}
+
+.hero-video__glow {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(70px);
+}
+
+.hero-video__glow--left {
+  inset: 20% auto auto -10%;
+  width: min(360px, 50vw);
+  height: min(360px, 50vw);
+  background: radial-gradient(circle, rgba(196, 133, 138, 0.12) 0%, transparent 70%);
+}
+
+.hero-video__glow--right {
+  inset: auto -8% 10% auto;
+  width: min(400px, 55vw);
+  height: min(400px, 55vw);
+  background: radial-gradient(circle, rgba(201, 166, 107, 0.14) 0%, transparent 70%);
+}
+
+.hero-video__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: 0;
+}
+
+.hero-video__frame {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  border-radius: 0;
+  overflow: hidden;
+  border-block: 1px solid rgba(201, 166, 107, 0.28);
+  border-inline: none;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+  background: #000;
+}
+
+.hero-video__player {
+  display: block;
+  width: 100%;
+  height: clamp(180px, 52vw, 220px);
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: center;
+  background: #000;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.hero-video__shield {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  cursor: default;
+  touch-action: none;
+  background: transparent;
+}
+
+@media (min-width: 768px) {
+  .hero-video {
+    padding-block: var(--space-md);
+  }
+
+  .hero-video__player {
+    height: clamp(240px, 28vw, 300px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video__player {
+    display: none;
+  }
+
+  .hero-video__shield {
+    display: none;
+  }
+
+  .hero-video__frame::after {
+    content: 'Video preview hidden — enable motion in system settings to watch.';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 240px;
+    padding: var(--space-md);
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,36 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: opacity var(--transition);
+}
+
+.logo:hover {
+  opacity: 0.85;
+}
+
+/* Crop frame: only crown + Luxx Haven + EVENTS — hides tagline & contact details below */
+.logo__frame {
+  display: block;
+  width: clamp(118px, 34vw, 168px);
+  height: clamp(38px, 11vw, 54px);
+  overflow: hidden;
+  line-height: 0;
+  background: transparent;
+}
+
+.logo__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  object-fit: cover;
+  object-position: top center;
+}
+
+@media (min-width: 768px) {
+  .logo__frame {
+    width: 168px;
+    height: 54px;
+  }
+}

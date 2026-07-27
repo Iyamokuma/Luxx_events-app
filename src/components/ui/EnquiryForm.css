@@ -1,0 +1,89 @@
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.enquiry-form__grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.enquiry-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.enquiry-form__field label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.enquiry-form__field input,
+.enquiry-form__field select,
+.enquiry-form__field textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: border-color var(--transition);
+}
+
+.enquiry-form__field input:focus,
+.enquiry-form__field select:focus,
+.enquiry-form__field textarea:focus {
+  border-color: var(--color-text);
+  outline: none;
+}
+
+.enquiry-form__field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.enquiry-form__field--full {
+  grid-column: 1 / -1;
+}
+
+.enquiry-form__submit {
+  align-self: flex-start;
+}
+
+.enquiry-form__submit:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.enquiry-form__notice {
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.enquiry-form__notice--success {
+  background: rgba(184, 149, 107, 0.12);
+  border: 1px solid rgba(184, 149, 107, 0.35);
+  color: var(--color-brand-deep);
+}
+
+.enquiry-form__notice--error {
+  background: rgba(196, 133, 138, 0.12);
+  border: 1px solid rgba(196, 133, 138, 0.35);
+  color: #7a3a40;
+}
+
+.enquiry-form__privacy {
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .enquiry-form__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

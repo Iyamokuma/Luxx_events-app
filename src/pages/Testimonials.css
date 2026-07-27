@@ -1,0 +1,29 @@
+.testimonials-grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.testimonial-card__quote {
+  margin-block: var(--space-sm);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.testimonial-card cite {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.stars {
+  color: var(--color-text);
+  letter-spacing: 0.1em;
+}
+
+@media (min-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
