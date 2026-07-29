@@ -11,8 +11,8 @@
 /* ---------- About ---------- */
 
 .home-about {
-  /* Fade out of the dark video band into the lighter page sections */
-  background: linear-gradient(180deg, #0a0810 0%, var(--color-hero-wash) 8%, var(--color-hero-bg) 45%, #fff 100%);
+  /* Continues from the warm hero wash into lighter page sections */
+  background: linear-gradient(180deg, var(--color-hero-wash) 0%, var(--color-hero-bg) 35%, #fff 100%);
   padding-block: var(--space-md) var(--space-lg);
 }
 

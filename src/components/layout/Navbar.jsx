@@ -33,7 +33,7 @@ export default function Navbar() {
     <>
       <header className={`navbar${isOnHero ? ' navbar--on-hero' : ''}`}>
         <div className="navbar__inner container">
-          <Logo className="navbar__logo" theme={isOnHero ? 'light' : 'default'} />
+          <Logo className="navbar__logo" theme="default" />
 
           <nav className="navbar__nav navbar__nav--desktop" aria-label="Primary navigation">
             {navLinks.map((link) => (
@@ -70,7 +70,7 @@ export default function Navbar() {
         isOpen={menuOpen}
         onClose={closeMenu}
         onContact={openContact}
-        theme={isOnHero ? 'light' : 'default'}
+        theme="default"
       />
 
       <ContactModal isOpen={contactOpen} onClose={closeContact} />

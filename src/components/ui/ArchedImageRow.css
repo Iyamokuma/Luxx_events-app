@@ -78,23 +78,17 @@
 }
 
 .arched-row--hero .arched-image {
-  border: 2px solid rgba(201, 166, 107, 0.35);
-  background: linear-gradient(180deg, #1a1520 0%, #0f0c14 100%);
-  box-shadow:
-    0 20px 48px rgba(0, 0, 0, 0.45),
-    0 0 24px rgba(201, 166, 107, 0.08);
+  border: 2px solid rgba(184, 149, 107, 0.4);
+  background: linear-gradient(180deg, #f5ebe3 0%, #eadfce 100%);
+  box-shadow: 0 18px 40px rgba(45, 27, 46, 0.14);
 }
 
 .arched-row--hero .arched-row__item:nth-child(odd) .arched-image {
-  box-shadow:
-    0 20px 48px rgba(0, 0, 0, 0.5),
-    0 0 20px rgba(196, 133, 138, 0.1);
+  box-shadow: 0 18px 40px rgba(45, 27, 46, 0.14);
 }
 
 .arched-row--hero .arched-row__item:nth-child(even) .arched-image {
-  box-shadow:
-    0 20px 48px rgba(0, 0, 0, 0.5),
-    0 0 24px rgba(201, 166, 107, 0.14);
+  box-shadow: 0 18px 40px rgba(184, 149, 107, 0.2);
 }
 
 .arched-row--hero .arched-image img {

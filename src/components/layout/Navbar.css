@@ -11,10 +11,10 @@
 }
 
 .navbar--on-hero {
-  background: rgba(10, 8, 16, 0.35);
+  background: rgba(250, 247, 242, 0.78);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom-color: rgba(255, 255, 255, 0.06);
+  border-bottom-color: rgba(232, 224, 216, 0.85);
 }
 
 .navbar__inner {
@@ -51,12 +51,12 @@
 }
 
 .navbar--on-hero .navbar__link {
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--color-brand-deep);
 }
 
 .navbar--on-hero .navbar__link:hover,
 .navbar--on-hero .navbar__link.is-active {
-  color: #dfc08a;
+  color: var(--color-accent);
 }
 
 .navbar__contact-btn {
@@ -68,16 +68,16 @@
 }
 
 .navbar--on-hero .navbar__contact-btn {
-  background: rgba(14, 11, 18, 0.65);
-  border: 1px solid rgba(201, 166, 107, 0.5);
-  color: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 0 20px rgba(201, 166, 107, 0.15);
+  background: var(--color-brand-deep);
+  border: 1px solid var(--color-brand-deep);
+  color: #fff;
+  box-shadow: none;
 }
 
 .navbar--on-hero .navbar__contact-btn:hover {
-  background: rgba(20, 16, 24, 0.85);
-  border-color: #c9a66b;
-  box-shadow: 0 0 28px rgba(201, 166, 107, 0.28);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  box-shadow: none;
 }
 
 .navbar__contact-btn:hover {
@@ -121,7 +121,7 @@
 }
 
 .navbar--on-hero .navbar__toggle span {
-  background: rgba(255, 255, 255, 0.88);
+  background: var(--color-brand-deep);
 }
 
 .navbar--on-hero .logo__image {
