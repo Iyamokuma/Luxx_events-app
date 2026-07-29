@@ -5,3 +5,4 @@ dist
 .vite
 .env
 luxx-events-upload.zip
+.vercel
