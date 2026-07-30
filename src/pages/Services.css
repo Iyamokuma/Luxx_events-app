@@ -11,9 +11,11 @@
 }
 
 .service-card__media {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
+  max-height: 260px;
   overflow: hidden;
   border: 1px solid var(--color-border);
+  border-radius: 12px;
 }
 
 .service-card__media img {

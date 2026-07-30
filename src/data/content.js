@@ -9,7 +9,7 @@ export const site = {
   },
   tagline: 'Event decor, styling, and rentals — for every occasion life brings.',
   email: 'enquiries@luxx-events.com',
-  notifyEmails: ['luxxhavenevents@gmail.com', 'luxehavenevents@yahoo.com'],
+  notifyEmails: ['luxehavenevents@yahoo.com', 'luxxhavenevents@gmail.com'],
   phone: '07958 928614',
   address: '12 Regent Street, London, W1B 5AH',
   hours: 'Mon–Sat, 9:00–18:00',
@@ -69,25 +69,25 @@ export const heroImages = [
 ];
 
 export const aboutContent = {
-  headline: 'We dress the moments that matter most.',
+  headline: 'Quality decor and unique hire — for every bespoke occasion.',
   intro:
-    'Luxx Haven Events is an event decor and styling studio creating beautiful, meaningful settings for weddings, birthdays, christenings, funerals, and every celebration in between — with a full rental catalogue to match.',
+    'Luxx Haven Events provides a wide range of quality and unique décor equipment and products for rental to clients who wish to manage their own décor — with a bespoke service tailored to each customer’s needs.',
   story: [
-    'From joyful milestones to tender farewells, every gathering deserves a setting styled with care. We transform venues with curtain draping, florals, backdrops, and considered table styling, so each event feels personal and complete.',
-    'Our roots and our craft come together in the details — including traditional touches such as Adinkra symbols for funerals — because honouring culture and family is at the heart of what we do.',
+    'We offer quality, unique décor equipment and products for hire so you can style your event your way. Whether you prefer to manage the décor yourself or work with us for a fuller styling service, we shape every arrangement around what your occasion calls for.',
+    'At Luxx, we stay practical and focused: our products and the services we render speak for themselves. From chairs and tables to drapes, plinths, and tableware, we supply the pieces that help you create a setting that feels considered, personal, and complete.',
   ],
   values: [
     {
-      title: 'Styled With Meaning',
-      text: 'Every drape, bloom, and backdrop is chosen to reflect the occasion — celebration or remembrance.',
+      title: 'Quality & Unique Hire',
+      text: 'A carefully chosen range of décor equipment and products — selected for quality, character, and real event use.',
     },
     {
-      title: 'Every Occasion Covered',
-      text: 'Weddings, children’s parties, christenings, Holy Communions, and funerals — we style them all with equal care.',
+      title: 'Bespoke to You',
+      text: 'Whether you hire and style yourself or need guidance, we adapt to each customer’s needs and vision.',
     },
     {
-      title: 'Decor & Rentals Together',
-      text: 'One team for styling and hire — plinths, tableware, linens, and backdrops — so everything simply works.',
+      title: 'Products That Speak',
+      text: 'We keep things functional and honest — letting our hire catalogue and the service we deliver speak for itself.',
     },
   ],
   stats: [
@@ -409,7 +409,7 @@ export const seo = {
   about: {
     title: 'About Us — Luxx Haven Events',
     description:
-      'Meet Luxx Haven Events — specialists in event decor, curtain draping, floristry, and venue styling for every occasion, from weddings to celebrations of life.',
+      'Luxx Haven Events provides quality, unique décor equipment and products for hire — with a bespoke service tailored to clients who wish to manage their own décor or work with us.',
   },
   services: {
     title: 'Services — Luxx Haven Events',

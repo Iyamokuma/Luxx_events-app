@@ -36,8 +36,8 @@ export default function EnquiryForm({ id = 'enquiry-form', source = 'booking' })
     <form id={id} className="enquiry-form" onSubmit={handleSubmit} noValidate>
       {status === 'success' ? (
         <p className="enquiry-form__notice enquiry-form__notice--success" role="status">
-          Thank you — your {source === 'contact' ? 'message' : 'enquiry'} has been sent. We will
-          reply within one business day.
+          Thank you — your {source === 'contact' ? 'message' : 'enquiry'} has been sent. A confirmation
+          email is on its way to you, and we will reply within one business day.
         </p>
       ) : null}
 

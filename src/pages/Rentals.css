@@ -48,7 +48,8 @@
 }
 
 .rental-card__media {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
+  max-height: 180px;
   overflow: hidden;
 }
 
