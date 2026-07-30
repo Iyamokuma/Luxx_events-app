@@ -6,3 +6,4 @@ dist
 .env
 luxx-events-upload.zip
 .vercel
+.env*

@@ -10,8 +10,8 @@ export const site = {
   tagline: 'Event decor, styling, and rentals — for every occasion life brings.',
   email: 'enquiries@luxx-events.com',
   notifyEmails: ['luxehavenevents@yahoo.com', 'luxxhavenevents@gmail.com'],
-  phone: '07958 928614',
-  address: '12 Regent Street, London, W1B 5AH',
+  phone: '+44 7940 410681',
+  address: '94 Larkswood Road, Corringham, SS17 9DD',
   hours: 'Mon–Sat, 9:00–18:00',
 };
 
