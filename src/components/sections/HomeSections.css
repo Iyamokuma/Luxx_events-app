@@ -8,11 +8,27 @@
   border-radius: 14px;
 }
 
+/* ---------- Hero gallery strip ---------- */
+
+.hero-gallery {
+  background: linear-gradient(
+    180deg,
+    var(--color-hero-wash) 0%,
+    var(--color-hero-bg) 55%,
+    #fff 100%
+  );
+  padding-block: var(--space-md) var(--space-lg);
+  margin-top: -1px;
+}
+
+.hero-gallery .arched-row--hero {
+  padding-top: 0.25rem;
+}
+
 /* ---------- About ---------- */
 
 .home-about {
-  /* Soft landing from the video hero wash into lighter page sections */
-  background: linear-gradient(180deg, var(--color-hero-wash) 0%, var(--color-hero-bg) 35%, #fff 100%);
+  background: #fff;
   padding-block: var(--space-md) var(--space-lg);
 }
 

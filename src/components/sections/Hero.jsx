@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { heroContent, heroImages, heroVideo } from '../../data/content';
-import ArchedImageRow from '../ui/ArchedImageRow';
+import { heroContent, heroVideo } from '../../data/content';
 import './Hero.css';
 
 export default function Hero() {
@@ -11,9 +10,20 @@ export default function Hero() {
     const video = videoRef.current;
     if (!video) return;
 
-    video.play().catch(() => {
-      /* Autoplay may be blocked until interaction */
-    });
+    video.muted = true;
+    video.defaultMuted = true;
+    video.setAttribute('muted', '');
+    video.playsInline = true;
+
+    const tryPlay = () => {
+      video.play().catch(() => {
+        /* Autoplay may be blocked until interaction */
+      });
+    };
+
+    tryPlay();
+    video.addEventListener('loadeddata', tryPlay);
+    return () => video.removeEventListener('loadeddata', tryPlay);
   }, []);
 
   return (
@@ -27,17 +37,16 @@ export default function Hero() {
           loop
           playsInline
           preload="auto"
+          disablePictureInPicture
         >
           <source src={heroVideo.src} type="video/mp4" />
         </video>
       </div>
 
       <div className="hero__scrim" aria-hidden="true" />
-      <div className="hero__glow hero__glow--gold" aria-hidden="true" />
-      <div className="hero__glow hero__glow--rose" aria-hidden="true" />
 
       <div className="hero__inner container">
-        <div className="hero__panel hero__panel--animate">
+        <div className="hero__copy hero__copy--animate">
           <p className="hero__eyebrow">{heroContent.eyebrow}</p>
 
           <h1 id="hero-title" className="hero__headline">
@@ -55,18 +64,6 @@ export default function Hero() {
               <span aria-hidden="true">&rsaquo;</span>
             </Link>
           </div>
-        </div>
-
-        <div className="hero__visual hero__visual--animate">
-          <div className="hero__visual-glow" aria-hidden="true" />
-          <ul className="hero__orbit-labels" aria-hidden="true">
-            {heroContent.orbitLabels.map((label, index) => (
-              <li key={label} className={`hero__orbit-label hero__orbit-label--${index + 1}`}>
-                {label}
-              </li>
-            ))}
-          </ul>
-          <ArchedImageRow images={heroImages} priorityFirst className="arched-row--hero" />
         </div>
       </div>
     </section>

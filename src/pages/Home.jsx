@@ -6,15 +6,21 @@ import HomeAboutPreview, {
   HomeServicesPreview,
   HomeTestimonialsPreview,
 } from '../components/sections/HomeSections';
+import ArchedImageRow from '../components/ui/ArchedImageRow';
 import EnquiryForm from '../components/ui/EnquiryForm';
 import SectionHeading from '../components/ui/SectionHeading';
-import { seo } from '../data/content';
+import { heroImages, seo } from '../data/content';
 
 export default function Home() {
   return (
     <>
       <PageMeta {...seo.home} path="/" />
       <Hero />
+      <section className="hero-gallery" aria-label="Event styling highlights">
+        <div className="container">
+          <ArchedImageRow images={heroImages} priorityFirst className="arched-row--hero" />
+        </div>
+      </section>
       <HomeAboutPreview />
       <HomeServicesPreview />
       <HomeEventsCovered />
