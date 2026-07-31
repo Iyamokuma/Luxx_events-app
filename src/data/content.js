@@ -40,9 +40,9 @@ export const navLinks = [
   { label: 'Contact', to: '/contact' },
 ];
 
-// Hero background video — local file in public/videos/
+// Hero showcase video — luxury event rentals & decor
 export const heroVideo = {
-  src: '/videos/hero.mp4',
+  src: '/videos/hero-showcase.mp4',
 };
 
 export const heroImages = [

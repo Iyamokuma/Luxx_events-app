@@ -11,10 +11,10 @@
 }
 
 .navbar--on-hero {
-  background: rgba(250, 247, 242, 0.78);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom-color: rgba(232, 224, 216, 0.85);
+  background: rgba(250, 247, 242, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom-color: rgba(255, 255, 255, 0.35);
 }
 
 .navbar__inner {

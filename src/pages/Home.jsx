@@ -1,6 +1,5 @@
 import PageMeta from '../components/ui/PageMeta';
 import Hero from '../components/sections/Hero';
-import HeroVideo from '../components/sections/HeroVideo';
 import HomeAboutPreview, {
   HomeEventsCovered,
   HomeRentalsPreview,
@@ -16,7 +15,6 @@ export default function Home() {
     <>
       <PageMeta {...seo.home} path="/" />
       <Hero />
-      <HeroVideo />
       <HomeAboutPreview />
       <HomeServicesPreview />
       <HomeEventsCovered />
