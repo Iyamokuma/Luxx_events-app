@@ -1,4 +1,6 @@
 import PageMeta from '../components/ui/PageMeta';
+import BookConsultationButton from '../components/ui/BookConsultationButton';
+import PageCta from '../components/ui/PageCta';
 import SafeImage from '../components/ui/SafeImage';
 import SectionHeading from '../components/ui/SectionHeading';
 import { eventsCovered, services, seo } from '../data/content';
@@ -28,6 +30,9 @@ export default function Services() {
                     <li key={detail}>{detail}</li>
                   ))}
                 </ul>
+                <BookConsultationButton className="btn btn--outline service-card__cta">
+                  Book a Consultation
+                </BookConsultationButton>
               </div>
             </article>
           ))}
@@ -50,6 +55,11 @@ export default function Services() {
           ))}
         </div>
       </section>
+
+      <PageCta
+        title="Let's plan your styling"
+        description="From draping to florals and venue styling — tell us what you need and we'll guide the next step."
+      />
     </>
   );
 }

@@ -87,7 +87,7 @@ export default function MobileMenuModal({ isOpen, onClose, onContact, theme = 'd
         </nav>
 
         <button type="button" className="btn mobile-menu-modal__cta" onClick={onContact}>
-          Contact Us
+          Book a Consultation
         </button>
       </div>
     </div>

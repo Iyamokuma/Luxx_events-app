@@ -97,7 +97,23 @@
   transition: color var(--transition);
 }
 
-.footer__link:hover {
+button.footer__link {
+  display: inline;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
+  color: var(--footer-heading);
+}
+
+.footer__link:hover,
+button.footer__link:hover {
   color: var(--footer-accent-hover);
 }
 

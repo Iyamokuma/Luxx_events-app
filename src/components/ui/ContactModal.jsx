@@ -47,7 +47,7 @@ export default function ContactModal({ isOpen, onClose }) {
       >
         <div className="contact-modal__header">
           <div>
-            <h2 id="contact-modal-title">Contact Us</h2>
+            <h2 id="contact-modal-title">Book a Consultation</h2>
             <p>Tell us about your event — we respond within one business day.</p>
           </div>
           <button

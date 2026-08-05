@@ -1,4 +1,5 @@
 import PageMeta from '../components/ui/PageMeta';
+import PageCta from '../components/ui/PageCta';
 import { seo, testimonials } from '../data/content';
 import './Testimonials.css';
 
@@ -39,6 +40,11 @@ export default function Testimonials() {
           ))}
         </div>
       </section>
+
+      <PageCta
+        title="Ready for your own story?"
+        description="Start with a consultation — share your date, guest count, and the look you have in mind."
+      />
     </>
   );
 }

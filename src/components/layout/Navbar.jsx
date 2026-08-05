@@ -1,8 +1,9 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import Logo from '../ui/Logo';
-import ContactModal from '../ui/ContactModal';
+import BookConsultationButton from '../ui/BookConsultationButton';
 import MobileMenuModal from '../ui/MobileMenuModal';
+import { useContactModal } from '../../context/ContactModalContext';
 import './Navbar.css';
 
 const navLinks = [
@@ -16,18 +17,16 @@ const navLinks = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [contactOpen, setContactOpen] = useState(false);
+  const { openContact } = useContactModal();
   const location = useLocation();
   const isOnHero = location.pathname === '/';
 
   const closeMenu = () => setMenuOpen(false);
 
-  const openContact = () => {
+  const handleContact = () => {
     closeMenu();
-    setContactOpen(true);
+    openContact();
   };
-
-  const closeContact = () => setContactOpen(false);
 
   return (
     <>
@@ -47,9 +46,9 @@ export default function Navbar() {
               </NavLink>
             ))}
 
-            <button type="button" className="btn navbar__contact-btn" onClick={openContact}>
-              Contact Us
-            </button>
+            <BookConsultationButton className="btn navbar__contact-btn">
+              Book a Consultation
+            </BookConsultationButton>
           </nav>
 
           <button
@@ -69,11 +68,9 @@ export default function Navbar() {
       <MobileMenuModal
         isOpen={menuOpen}
         onClose={closeMenu}
-        onContact={openContact}
+        onContact={handleContact}
         theme="default"
       />
-
-      <ContactModal isOpen={contactOpen} onClose={closeContact} />
     </>
   );
 }

@@ -1,7 +1,8 @@
 import { useMemo, useState } from 'react';
 import PageMeta from '../components/ui/PageMeta';
+import PageCta from '../components/ui/PageCta';
 import SafeImage from '../components/ui/SafeImage';
-import { Link } from 'react-router-dom';
+import BookConsultationButton from '../components/ui/BookConsultationButton';
 import { rentalCategories, rentals, seo } from '../data/content';
 import './Rentals.css';
 
@@ -75,15 +76,20 @@ export default function Rentals() {
                   <h2>{item.name}</h2>
                   <p className="rental-card__price">{item.price}</p>
                   <p className="muted">{item.description}</p>
-                  <Link to="/contact" className="btn btn--outline rental-card__cta">
-                    Request Quote
-                  </Link>
+                  <BookConsultationButton className="btn btn--outline rental-card__cta">
+                    Book a Consultation
+                  </BookConsultationButton>
                 </div>
               </article>
             ))}
           </div>
         )}
       </section>
+
+      <PageCta
+        title="Need help choosing hire pieces?"
+        description="Book a consultation and we will match chairs, tables, drapes, and tableware to your occasion."
+      />
     </>
   );
 }

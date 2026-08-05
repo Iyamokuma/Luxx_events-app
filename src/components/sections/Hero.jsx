@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { heroContent, heroVideo } from '../../data/content';
+import BookConsultationButton from '../ui/BookConsultationButton';
 import './Hero.css';
 
 export default function Hero() {
@@ -56,9 +57,9 @@ export default function Hero() {
           <p className="hero__description">{heroContent.description}</p>
 
           <div className="hero__actions">
-            <Link to="/contact" className="hero__cta-primary">
+            <BookConsultationButton className="hero__cta-primary">
               {heroContent.ctaPrimary}
-            </Link>
+            </BookConsultationButton>
             <Link to="/gallery" className="hero__cta-link">
               {heroContent.ctaSecondary}
               <span aria-hidden="true">&rsaquo;</span>

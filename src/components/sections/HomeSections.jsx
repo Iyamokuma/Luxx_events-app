@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { aboutContent, eventsCovered, galleryItems, rentals, services, testimonials } from '../../data/content';
+import BookConsultationButton from '../ui/BookConsultationButton';
 import SafeImage from '../ui/SafeImage';
 import SectionHeading from '../ui/SectionHeading';
 import './HomeSections.css';
@@ -33,9 +34,14 @@ export default function HomeAboutPreview() {
               </article>
             ))}
           </div>
-          <Link to="/about" className="btn btn--outline home-about__cta">
-            Learn More
-          </Link>
+          <div className="home-about__actions">
+            <Link to="/about" className="btn btn--outline">
+              Learn More
+            </Link>
+            <BookConsultationButton className="btn">
+              Book a Consultation
+            </BookConsultationButton>
+          </div>
         </div>
       </div>
     </section>

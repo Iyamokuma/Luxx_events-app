@@ -1,4 +1,5 @@
 import PageMeta from '../components/ui/PageMeta';
+import PageCta from '../components/ui/PageCta';
 import SectionHeading from '../components/ui/SectionHeading';
 import { aboutContent, seo } from '../data/content';
 
@@ -46,6 +47,8 @@ export default function About() {
           ))}
         </div>
       </section>
+
+      <PageCta />
     </>
   );
 }

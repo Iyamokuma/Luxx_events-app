@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import PageMeta from '../components/ui/PageMeta';
+import PageCta from '../components/ui/PageCta';
 import SafeImage from '../components/ui/SafeImage';
 import { galleryCategories, galleryItems, seo } from '../data/content';
 import './Gallery.css';
@@ -47,6 +48,11 @@ export default function Gallery() {
           ))}
         </div>
       </section>
+
+      <PageCta
+        title="Love what you see?"
+        description="Book a consultation and we'll help style your wedding, celebration, or remembrance service."
+      />
     </>
   );
 }

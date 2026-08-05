@@ -1,0 +1,45 @@
+.page-cta {
+  padding-block: var(--space-lg);
+  background: linear-gradient(180deg, #fff 0%, var(--color-hero-bg) 100%);
+}
+
+.page-cta__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  text-align: center;
+}
+
+.page-cta__copy h2 {
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-brand-deep);
+}
+
+.page-cta__copy p {
+  margin-top: 0.5rem;
+  max-width: 34rem;
+  margin-inline: auto;
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.page-cta__btn {
+  min-width: 14rem;
+}
+
+@media (min-width: 768px) {
+  .page-cta__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .page-cta__copy p {
+    margin-inline: 0;
+  }
+}

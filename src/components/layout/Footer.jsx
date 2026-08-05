@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { navLinks, site } from '../../data/content';
+import BookConsultationButton from '../ui/BookConsultationButton';
 import Logo from '../ui/Logo';
 import './Footer.css';
 
@@ -14,9 +15,9 @@ export default function Footer() {
         <div className="footer__brand">
           <Logo className="footer__logo" theme="light" />
           <p className="footer__tagline">{site.tagline}</p>
-          <Link to="/contact" className="btn footer__cta">
+          <BookConsultationButton className="btn footer__cta">
             Book a Consultation
-          </Link>
+          </BookConsultationButton>
         </div>
 
         <nav className="footer__nav" aria-label="Footer navigation">
@@ -25,11 +26,17 @@ export default function Footer() {
             <Link to="/" className="footer__link">
               Home
             </Link>
-            {navLinks.map((link) => (
-              <Link key={link.to} to={link.to} className="footer__link">
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.to === '/contact' ? (
+                <BookConsultationButton key={link.to} className="footer__link">
+                  {link.label}
+                </BookConsultationButton>
+              ) : (
+                <Link key={link.to} to={link.to} className="footer__link">
+                  {link.label}
+                </Link>
+              ),
+            )}
           </div>
         </nav>
 
